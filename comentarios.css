@@ -1,0 +1,89 @@
+
+.page-title {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal */
+.comment-section {
+  display: flex;
+  gap: 1rem;
+  margin-top: 6rem;
+  padding: 2rem;
+}
+
+/* Publicación (3/4 del ancho) */
+.publicacion {
+  flex: 3;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Comentarios (1/4 del ancho) */
+.comentarios {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+/* Texto de comentario */
+.comentario {
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+}
+
+/* Reacciones */
+.reacciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.reacciones .me-gusta {
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.reacciones .reportar {
+  color: #dc3545;
+  cursor: pointer;
+}
+
+/* Caja para escribir nuevo comentario */
+.nuevo-comentario {
+  margin-top: 1rem;
+}
+
+.nuevo-comentario textarea {
+  resize: none;
+  border-radius: 0.5rem;
+}
+
+.nuevo-comentario button {
+  margin-top: 0.5rem;
+  width: 100%;
+}
