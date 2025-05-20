@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: all 0.3s ease;
+}
+
+/* Botón de Dark Mode */
+.dark-switch-wrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  z-index: 1000;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.dark-switch-wrapper i {
+  color: #0d6efd;
+  margin-right: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+/* Estilos generales */
+.logo {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-anim 5s ease infinite;
+}
+
+@keyframes gradient-anim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Modo oscuro */
+body.bg-dark {
+  background-color: #212529 !important;
+  color: #f8f9fa !important;
+}
+
+.bg-dark .navbar {
+  background-color: #343a40 !important;
+  border-bottom: 1px solid #495057 !important;
+}
+
+.bg-dark .card {
+  background-color: #343a40 !important;
+  border-color: #495057 !important;
+}
+
+.bg-dark .text-muted {
+  color: #adb5bd !important;
+}
+
+.bg-dark .bg-light {
+  background-color: #495057 !important;
+}
+
+.bg-dark .btn-outline-primary {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.bg-dark .btn-outline-primary:hover {
+  background-color: #f8f9fa;
+  color: #212529 !important;
+}
+
+/* Sidebar sticky */
+.sticky-sidebar {
+  position: sticky;
+  top: 20px;
+  transition: top 0.3s ease;
+}
+
+/* Efectos hover para tarjetas */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.bg-dark .card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
+}
+
+/* Gradiente para la imagen de muestra */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+}
+
+/* Responsive: Sidebar más estrecho en desktop */
+@media (min-width: 992px) {
+  .col-lg-4 {
+    max-width: 350px;
+    margin-left: auto;
+  }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 991.98px) {
+  .sticky-sidebar {
+    position: static !important;
+  }
+}

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantalla de Presentación</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Presentacion.css" />
+</head>
+<body>
+  <!-- Dark mode switch -->
+  <div class="dark-switch-wrapper">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="darkSwitch">
+      <label class="form-check-label" for="darkSwitch">
+        <i class="bi bi-brightness-high-fill"></i> Modo oscuro
+      </label>
+    </div>
+  </div>
+
+  <div class="container text-center d-flex flex-column justify-content-center align-items-center vh-100">
+    <h1 class="display-4 fw-bold page-title">Bienvenido al Museo Digital FIME</h1>
+    <p class="lead presentation">En esta Pagina web es donde distintas personas pueden publicar, explorar, compartir y debatir sobre obras publicadas en todo el mundo, ya seas un artista que busque publicar sus obras hasta un critico del arte buscando dar su opinion, todo se adapta a la vibra de los usuarios ¡Explora, Crea y Comparte tu Talento!
+    </p>
+    <div>
+      <a href="Login.html" class="btn btn-primary btn-lg me-3"><i class="bi bi-box-arrow-in-right me-1"></i> Iniciar Sesión</a>
+      <a href="CrearCuenta.html" class="btn btn-outline-primary btn-lg"><i class="bi bi-person-plus-fill me-1"></i> Crear Cuenta</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('darkSwitch').addEventListener('change', function() {
+      document.body.classList.toggle('bg-dark');
+      document.body.classList.toggle('text-white');
+    });
+  </script>
+</body>
+</html>

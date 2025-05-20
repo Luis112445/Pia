@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+  <div class="dark-switch-wrapper">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="darkSwitch">
+      <label class="form-check-label" for="darkSwitch">
+        <i class="bi bi-brightness-high-fill"></i> Modo oscuro
+      </label>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="text-center page-title"><i class="bi bi-gear-fill me-2"></i>Panel del Administrador</h2>
+    <div class="card">
+      <div class="card-body">
+        <p class="mb-4">Bienvenido, Admin</p>
+        <ul class="list-group">
+          <li class="list-group-item"><i class="bi bi-people-fill me-2"></i>Gestión de Usuarios</li>
+          <li class="list-group-item"><i class="bi bi-file-earmark-arrow-up me-2"></i>Revisar Contenido</li>
+          <li class="list-group-item"><i class="bi bi-graph-up-arrow me-2"></i>Estadísticas</li>
+        </ul>
+        <div class="text-end mt-4">
+          <a href="Presentacion.html" class="btn btn-secondary"><i class="bi bi-box-arrow-left me-1"></i>Cerrar Sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('darkSwitch').addEventListener('change', function() {
+      document.body.classList.toggle('bg-dark');
+      document.body.classList.toggle('text-white');
+      const card = document.querySelector('.card');
+      if (card) card.classList.toggle('bg-secondary');
+    });
+  </script>
+</body>
+</html>

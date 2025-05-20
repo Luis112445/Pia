@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Estilos base */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Switch */
+.dark-switch-wrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  z-index: 1000;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.dark-switch-wrapper i {
+  color: #0d6efd;
+  margin-right: 0.25rem;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Componentes de perfil */
+.banner-perfil {
+  background-color: #e9ecef;
+  margin-top: -1rem;
+}
+
+.avatar-perfil {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: 4px solid white;
+  margin-top: -50px;
+}
+
+/* Pestañas */
+.nav-tabs .nav-link {
+  border: none;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0d6efd;
+  border-bottom: 3px solid #0d6efd;
+}
+
+/* Modo oscuro */
+body.bg-dark {
+  background-color: #212529 !important;
+  color: #f8f9fa !important;
+}
+
+.bg-dark .navbar {
+  background-color: #343a40 !important;
+}
+
+.bg-dark .card,
+.bg-dark .banner-perfil,
+.bg-dark .nav-tabs {
+  background-color: #343a40 !important;
+  border-color: #495057 !important;
+}
+
+.bg-dark .text-muted {
+  color: #adb5bd !important;
+}
+
+.bg-dark .nav-tabs .nav-link {
+  color: #adb5bd;
+}
+
+.bg-dark .nav-tabs .nav-link.active {
+  color: #f8f9fa;
+  border-bottom-color: #f8f9fa;
+}
+
+.bg-dark .avatar-perfil {
+  border-color: #343a40;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .avatar-perfil {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    font-size: 1.5rem;
+  }
+}

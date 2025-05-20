@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Estilos base */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Switch */
+.dark-switch-wrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  z-index: 1000;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.dark-switch-wrapper i {
+  color: #0d6efd;
+  margin-right: 0.25rem;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pestañas */
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0d6efd;
+}
+
+.nav-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background: #0d6efd;
+  border-radius: 3px 3px 0 0;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Modo oscuro */
+body.bg-dark {
+  background-color: #212529 !important;
+  color: #f8f9fa !important;
+}
+
+.bg-dark .navbar {
+  background-color: #343a40 !important;
+}
+
+.bg-dark .card {
+  background-color: #343a40 !important;
+  border-color: #495057 !important;
+}
+
+.bg-dark .nav-tabs .nav-link {
+  color: #adb5bd;
+}
+
+.bg-dark .nav-tabs .nav-link.active {
+  color: #f8f9fa;
+}
+
+.bg-dark .nav-tabs .nav-link.active::after {
+  background: #f8f9fa;
+}
+
+.bg-dark .text-muted {
+  color: #adb5bd !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-tabs .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

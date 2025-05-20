@@ -1,0 +1,75 @@
+body {
+    background-color: #f0f4f8;
+  }
+  
+  .page-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-anim 5s ease infinite;
+    text-align: center;
+  }
+  
+  @keyframes gradient-anim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border: 3px solid #0d6efd;
+    transition: transform 0.2s;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .list-group-item {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dark-switch-wrapper {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  }
+  
+  body.bg-dark {
+    background-color: #212529 !important;
+  }
+  
+  body.bg-dark .page-title {
+    background: none !important;
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+    animation: none !important;
+  }
+  
+  body.bg-dark .card {
+    background-color: #343a40;
+    border-color: #6c757d;
+  }
+  
+  body.bg-dark .list-group-item {
+    background-color: #495057;
+    color: #f8f9fa;
+  }

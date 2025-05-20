@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+/* Fondo general */
+body {
+    background-color: #f0f4f8;
+  }
+
+/* Posiciona y estiliza el título principal */
+.page-title {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+  /* Animación de gradiente */
+  animation: gradient-anim 5s ease infinite;
+}
+.page-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Definición de la animación */
+@keyframes gradient-anim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Posiciona el switch de modo oscuro en esquina superior derecha con estilo */
+.dark-switch-wrapper {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+.dark-switch-wrapper i {
+  color: #0d6efd;
+  margin-right: 0.25rem;
+}
+  
+  /* Tarjeta del login */
+  .login-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border: 3px solid #0d6efd;
+    transition: transform 0.2s;
+  }
+  .login-card:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Botón degradado */
+  .login-btn {
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    color: #fff;
+    font-weight: 600;
+  }
+  .login-btn i {
+    margin-right: 0.5rem;
+  }
+  
+  /* Efecto en íconos sociales */
+  .social-icons i {
+    transition: transform 0.2s;
+  }
+  .social-icons i:hover {
+    transform: scale(1.2);
+  }
+
+/* Transición y enfoque en inputs */
+.login-card .form-control:focus {
+  border-color: #6610f2;
+  box-shadow: 0 0 0 0.2rem rgba(102, 16, 242, 0.25);
+}
+
+/* Iconos en input-groups */
+.input-group-text {
+  background-color: #e9ecef;
+  border: none;
+}
+.input-group .btn-outline-secondary {
+  border: none;
+}
+
+/* Spinner color */
+#btnSpinner {
+  color: #fff;
+}
+
+/* Hover animado en botón */
+.login-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Modal personalizado */
+.modal-content {
+  border-radius: 0.75rem;
+}
+.modal-header, .modal-footer {
+  border: none;
+}
+
+/* Estilos dark mode */
+
+body.bg-dark .page-title {
+    /* Quita el gradiente */
+    background: none !important;
+    /* Rellena el texto en blanco */
+    -webkit-text-fill-color: #fff !important;
+    /* Asegura color sobre fallback */
+    color: #fff !important;
+    /* Opcional: elimina sombra para más legibilidad */
+    text-shadow: none;
+    /* Detén la animación */
+    animation: none !important;
+  }
+body.bg-dark {
+  background-color: #212529 !important;
+}
+body.bg-dark .login-card {
+  border-color: #6c757d;
+  background-color: #343a40;
+}
+body.bg-dark .login-card .form-label {
+  color: #f8f9fa;
+}
+body.bg-dark .login-card .form-control {
+  background-color: #495057;
+  color: #f8f9fa;
+  border-color: #6c757d;
+}
+body.bg-dark .login-card a {
+  color: #adb5bd;
+}
+body.bg-dark .login-btn {
+  background: linear-gradient(90deg, #0d6efd, #6610f2) !important;
+}
+
+/* Estilo para checkbox y switch */
+.form-check-input:checked {
+  background-color: #6610f2;
+  border-color: #6610f2;
+}
